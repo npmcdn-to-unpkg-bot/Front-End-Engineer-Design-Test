@@ -1,0 +1,95 @@
+<!--載入jQuery-->
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<!--載入tinyMap-->
+<script src="http://app.essoduke.org/js/tinyMap/jquery.tinyMap-3.3.11.js"></script>
+<!--載入GoogleApi-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=drawing"></script>
+
+<style>
+  .map {
+	width: 640px;
+	height: 480px;
+}
+</style>
+
+<h1 align="center">查詢GoogleMap地址Code</h1>
+經度:<input type='text' name="tbxlng" id="tbxlng" value='121.564621925354' onchange="ChangeMarker()">
+緯度:<input type='text' name="tbxlat" id="tbxlat" value='25.03354442783431'  onchange="ChangeMarker()">
+<br/>
+地址:<input type='text' name="tbxAddr" id="tbxAddr" style="width:300px">
+
+<div class="map"></div>
+
+<script>
+var map = $(".map");
+
+GetAddress($("#tbxlat").val(), $("#tbxlng").val());
+
+map.tinyMap({
+    'center': '台北市信義區台北101',
+    'zoom'  : 14,
+	'marker' :[{'addr': [$("#tbxlat").val(), $("#tbxlng").val()], 'text': $("#tbxAddr").val()},],
+	'event': {
+        'click': function (e) {
+			map.tinyMap('clear');
+			
+			GetAddress(e.latLng.lat(), e.latLng.lng());
+			
+			$("#tbxlng").val(e.latLng.lng());
+			$("#tbxlat").val(e.latLng.lat());
+			
+			map.tinyMap('panTo', [e.latLng.lat(), e.latLng.lng()]);
+            map.tinyMap('modify', {				
+                'marker': [
+                    {
+                        'addr': [e.latLng.lat(), e.latLng.lng()],
+						'text': $("#tbxAddr").val()
+                    }
+                ]
+            });
+        }
+    }
+});
+
+//在InputOnchange時，變更地圖
+function ChangeMarker(){
+	//移動地圖中心
+	map.tinyMap('panTo',  [$("#tbxlat").val(), $("#tbxlng").val()]);
+    //清除地圖上所有圖層
+	map.tinyMap('clear');
+	//取得地址
+	GetAddress($("#tbxlat").val(), $("#tbxlng").val());
+	//重新畫出marker
+	map.tinyMap('modify', {
+		'marker': [
+			{
+				'addr': [$("#tbxlat").val(), $("#tbxlng").val()], 
+				'text': $("#tbxAddr").val()
+			}
+		]
+	});
+}
+
+//透過經緯度回傳地址
+function GetAddress(lat,lng)
+{
+    //建立Geocoder物件
+	var geocoder = new google.maps.Geocoder();
+    //宣告經緯度物
+	var latlng = {lat: parseFloat(lat), lng: parseFloat(lng)};
+
+	geocoder.geocode({
+	  'latLng': latlng
+	}, function(results, status) {
+        
+		if (status === google.maps.GeocoderStatus.OK) {
+			if (results) {
+				var addr = results[0].formatted_address;
+				$("#tbxAddr").val(addr);
+			}
+		} else {
+			alert("Reverse Geocoding failed because: " + status);
+		}
+	});
+}
+</script>
