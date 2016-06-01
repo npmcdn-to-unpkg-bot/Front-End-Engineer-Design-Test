@@ -8,7 +8,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- boostrap CSS -->
+		<!-- boostrap CSS --> 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Optional theme -->
@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="CSS/style.css">
 	</head>
 	<body>
+
 		<!-- 上方 -->  
 		<header id="header"></header>
 		<!-- 側邊 -->
@@ -34,6 +35,76 @@
 			 <p class="blue">footer(下方)</p>
 		</div>
 		<hr>
+	<style type="text/css">
+		.main-header {
+		  position: fixed;
+		  width: 100%;
+		  margin: 0 auto;
+		  z-index: 99;
+		  top: 94px;
+		  -webkit-transition: all 150ms ease-in-out;
+		  -moz-transition: all 150ms ease-in-out;
+		  transition: all 150ms ease-in-out;
+		}
+
+		.scrolled {
+		  position: fixed;
+		  left: 0;
+		  top: 0;
+		  -webkit-transition: all 150ms ease-in-out;
+		  -moz-transition: all 150ms ease-in-out;
+		  transition: all 150ms ease-in-out;
+		}
+
+		#menu-wrapper {
+		  background-color: white;
+		  overflow: hidden;
+		  -moz-box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
+		  -webkit-box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
+		  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
+		 }
+	</style>
+		<div class="main-header">
+            <div class="container">
+                <div id="menu-wrapper">
+					<div class="bs-example" data-example-id="navbar-form"> 
+						<!-- bootstrap menu -->
+						<nav class="navbar navbar-default"> 
+						  <div class="container-fluid"> 
+								<div class="navbar-header"> 
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false"> 
+										<span class="sr-only">Toggle navigation</span> 
+										<span class="icon-bar"></span> 
+										<span class="icon-bar"></span> 
+										<span class="icon-bar"></span> 
+									</button> <a class="navbar-brand" href="#">Brand</a> 
+								</div> 
+							<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-2" aria-expanded="false" style="height: 1px;"> 
+								 <form class="navbar-form navbar-left" role="search"> 
+									<div class="form-group"> 
+										<input type="text" class="form-control" placeholder="Search"> 
+									</div> 
+							       <button type="submit" class="btn btn-default">Submit</button> 
+								 </form> 
+							</div> 
+						   </div> 
+						</nav> 
+						<!-- End bootstrap menu -->
+					</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+		     $(window).scroll(function(){
+		         $('.main-header').toggleClass('scrolled', $(this).scrollTop() > 1);
+		     });
+
+		    $('a[href="#top"]').click(function(){
+		        $('html, body').animate({scrollTop: 0}, 'slow');
+		        return false;
+		    });		
+        </script>
+
 		<!-- 下方 -->
 		<footer id="footer"></footer>
 	</body>
