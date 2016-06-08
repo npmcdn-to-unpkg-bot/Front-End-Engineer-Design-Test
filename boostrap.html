@@ -28,14 +28,18 @@
 <hr>
  <!-- 常用表單 -->
   <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+  <div class="row">
+   <div class="col-lg-6">
     <div class="form-group">
-      <label class="col-lg-5 col-sm-2 control-label">Title</label>
+      <label class="col-lg-3 col-sm-2 control-label">Title</label>
       <div class="col-lg-5">
         <input type="text" class="form-control" name="content[title]">
       </div>
     </div>
+   </div>
+   <div class="col-lg-6">
     <div class="form-group">
-      <label class="col-lg-5 col-sm-2 control-label">Title</label>
+      <label class="col-lg-3 col-sm-2 control-label">Select</label>
       <div class="col-lg-5">
         <select class="form-control" name="content[title]">
           <option value="1">1</option>
@@ -43,193 +47,47 @@
         </select> 
       </div>
     </div>
+  </div>
+ </div>
+ <hr>
+    <div class="form-group">
+      <label class="col-lg-3 col-sm-2 control-label">Select2</label>
+      <div class="col-lg-1">
+        A：<input type="radio" class="form-control" name="content[descrip]" value="1">
+      </div>
+      <div class="col-lg-1">
+        B：<input type="radio" class="form-control" name="content[descrip]" value="2">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-3 col-sm-2 control-label">Select3</label>
+      <div class="col-lg-1">
+        A：<input type="checkbox" class="form-control" name="content[descrip]" value="1">
+      </div>
+      <div class="col-lg-1">
+        B：<input type="checkbox" class="form-control" name="content[descrip]" value="2">
+      </div>
+    </div>
     <div class="form-group">
       <label class="col-lg-3 col-sm-2 control-label">Descrip</label>
-      <div class="col-lg-1">
+      <div class="col-lg-5">
         <input type="text" class="form-control" name="content[descrip]">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-lg-3 col-sm-2 control-label">Submit</label>
+      <label class="col-lg-3 col-sm-2 control-label">Descrip</label>
+      <div class="col-lg-5">
+        <textarea rows="10" class="form-control" name="content[descrip]"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-5 col-sm-2 control-label">Submit</label>
       <div class="col-lg-1">
         <input type="submit" class="form-control" value="提交">
       </div>
     </div>
   </form>
-<br><hr>
-<!-- Button & menu -->
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">1</button>
-  <button type="button" class="btn btn-default">2</button>
-
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Dropdown link</a></li>
-      <li><a href="#">Dropdown link</a></li>
-    </ul>
-  </div>
-</div>
-<hr>
-<!-- bootstrap 各種 span Ex. -->
-<span class="glyphicon glyphicon-flag"></span>
-
-<span class="glyphicon glyphicon-log-out"> </span>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-<button id="abc">ok</button>
-<script type="text/javascript">
-  $("#abc").click(function(){
-    alert("ok");
-  });
-</script>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="row">
-  <div class="col-lg-4">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-4">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-4">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="panel panel-default">  
-  <div class="panel-heading">Panel heading</div> 
-    <div class="panel-body"> 
-      <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
-    </div>  
-
-    <table class="table"> 
-      <thead> 
-      <tr> 
-        <th>ID</th> 
-        <th>First Name</th> 
-        <th>Last Name</th> 
-        <th>Username</th> </tr> 
-      </thead> 
-      <tbody> 
-        <tr> 
-          <th scope="row">1</th> 
-            <td>Mark</td> 
-            <td>Otto</td> 
-            <td>@mdo</td> 
-          </tr> <tr> 
-        <th scope="row">2</th> 
-        <td>Jacob</td> 
-        <td>Thornton</td> 
-        <td>@fat</td> </tr> 
-      <tr> <th scope="row">3</th> 
-      <td>Larry</td> 
-      <td>the Bird</td> 
-      <td>@twitter</td> 
-      </tr> 
-      </tbody> 
-    </table> 
-
-</div>
-
-<div class="row">
-  <div class="col-sm-6 col-md-12">
-    <div class="thumbnail">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- bootstrap 子分類 -->
-<ul class="nav navbar-nav">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">menu <b class="caret"></b></a>
-  <ul class="dropdown-menu">
-    <li class="dropdown-submenu"><a href="#">Item 1</a>
-        <ul class="dropdown-menu">
-            <li>Item 1-1</a>
-            <li>Item 1-2</a>
-        </ul>
-    </li>
-    <li>Item 2</li>
-</ul>
-
+<br>
 </body>  
   <!--- Bootstrap js -->
   <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
