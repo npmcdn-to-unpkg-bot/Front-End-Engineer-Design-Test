@@ -1,6 +1,8 @@
 /*@charset "utf-8";*/
 
+
 /* 全部的使用者都會載入這裡的 CSS。 常用  Media Queries */
+
 @media screen and (min-width: 1200px) {
     /* 如果使用者之視窗寬度 >= 1200px，將會再載入這裡的 CSS。 */
 }
@@ -17,6 +19,7 @@
     /* 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。 */
 }
 
+
 /*  body {
     margin:0;
     padding:0;
@@ -27,45 +30,51 @@
     height:auto;
   }*/
 
+
 /* 網頁佈局 */
+
 #header {
-	 width:100%;
-     height:80px;
-     text-align:center;
-     background:#000000;
-     margin:0 auto;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background: #000000;
+    margin: 0 auto;
 }
+
 #sidebar {
-	width: 30%;
+    width: 30%;
     float: left;
     height: 700px;
-    background:#383;
+    background: #383;
 }
 
 #footer {
-    background-color:#000000;
+    background-color: #000000;
     text-align: center;
-    width:100%;
-    clear:left;
-    height:30px;
-    background:#833;
-    margin:0 auto;
+    width: 100%;
+    clear: left;
+    height: 30px;
+    background: #833;
+    margin: 0 auto;
 }
 
-        p {
-          margin: 4px;
-          font-size: 16px;
-          font-weight: bolder;
-          cursor: pointer;
-        }
-        .blue {
-          color: blue;
-        }
-        .highlight {
-          background: yellow;
-        }
+p {
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
 
- /* #ExName {
+.blue {
+    color: blue;
+}
+
+.highlight {
+    background: yellow;
+}
+
+
+/* #ExName {
        position:absolute;
        top: 100px;
        left: 100px;
@@ -75,21 +84,78 @@
        margin: 6% -3%;
   }*/
 
+
 /* 活動切版css */
+
 .banner01 {
-  background-image: url(../images/image_a/act_banner_4finsh_01.png);
-  background-repeat: no-repeat;
+    background-image: url(../images/image_a/act_banner_4finsh_01.png);
+    background-repeat: no-repeat;
     background-position: center 0px;
     width: 1920px;
     height: 700px;
 }
 
-  .img01 {
+.img01 {
     margin: 20% 35%;
     z-index: 1;
-  }
-  .img02 {
+}
+
+.img02 {
     margin-top: -35%;
     margin-left: 30%;
     z-index: 1;
-  }
+}
+
+
+/* 正中央Div框架CSS基礎 */
+
+.divCore {
+    background-color: #000079;
+    width: 300px;
+    height: 300px;
+    margin: 30% 57.5% 25% 33.3%;
+}
+
+.div1 {
+    width: 150px;
+    height: 150px;
+    float: left;
+    background-color: #930000;
+}
+
+
+/* nav menu Demo 水平 */
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    list-style-position: inside;
+    text-align: center;
+}
+
+nav button {
+    color: #000;
+    width: 90px;
+    height: 35px;
+    margin: 5px;
+}
+
+
+/* ul-li menu Demo 垂直 */
+
+ul {
+    width: 250px;
+    /*height: 0px;
+*/
+    list-style-position: inside;
+}
+
+li {
+    height: 15px;
+    border-style: solid;
+    border-width: 5px;
+    padding: 15px;
+    /*float: left;*/
+    /* 水平*/
+}
