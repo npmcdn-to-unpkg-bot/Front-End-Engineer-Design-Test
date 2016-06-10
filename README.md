@@ -1,21 +1,14 @@
 # Front-End-Engineer Web-Page-Design Application Model:
-# 前端網頁設計佈局(切版)模組設計
 
-# program：
-	HTML5, CSS, CSS3 , JQUERY, JAVASCRIPT, BOOSTRAP
+# Java Script
 
-# Front-End-Engineer test Design
-
-# Bootstrap
-	常用表單
-
-# jQuery-2.2.4
+# jQuery(2.2.4)
 
 # jQuery-UI
 
-# jQueryAjax
+# AngularJS
 
-# CSS小功能
-	menu-Demo
-	基礎排版技巧
+# Bootstrap
+
+# HTML/CSS/CSS3
 
