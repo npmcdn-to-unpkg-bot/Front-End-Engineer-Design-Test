@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS 新一代網頁設計(MyApp)</title>
+	 <!-- boostrap CSS Link -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="CSS/myCSS.css">
+
+    <!-- jQuery.2.2.4.min.js Link -->
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+</head>
+<body ng-controller="MyController" ng-init="hour=13">
+      <label class="control-label">開發者模式：</label>
+      <input class="form-control" type="text" ng-model="idea1" placeholder="Enter a text here">
+      <input class="form-control" type="text" ng-model="idea2" placeholder="Enter a text here">
+      <hr>
+      <h1 class="ToSize">To: {{ idea1 }}</h1>
+      <h1 class="ToSize">To2: {{ idea2 }}</h1>
+      <h3>Title: {{ firstName }} </h3>
+      <h3>Name: {{ lastName }}</h3>
+      <hr>
+      <table>
+        <tr ng-repeat="x in names">
+          <td>{{ x.Name }}</td>
+          <td>{{ x.Country }}</td>
+        </tr>
+      </table>
+      <hr>
+        <p ng-show="hour > 13">I am visible.</p>
+        <p ng-hide="true">I am not visible.</p>
+        <p ng-hide="false">I am visible.</p>
+      <hr>
+        <p>{{x1}}</p>
+        <p>{{x2}}</p>
+      <hr>
+      <a href="http://www.w3schools.com/angular/angular_examples.asp">AngularJS</a>
+      <a href="http://www.w3schools.com/ajax/ajax_examples.asp">AJAX</a>
+</body>
+    <!-- AngularJS (1.5.7) Link Code -->
+    <script src="angular-1.5.7/angular.min.js"></script>
+    <script src="angular-1.5.7/angular.js"></script>
+
+    <!-- AngularJS 功能Link Code -->
+    <script src="angularjs/myApp.js"></script>
+  
+    <!--- Bootstrap js -->
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+</html>
