@@ -1,0 +1,20 @@
+/* UIUX 前端CSS版面設計 */
+header {
+	background-color: #FFECF5;
+	width: 102%;
+	height: 75px;
+	margin: -10px -10px 0px -1%;
+	border: 2px #ccc solid;
+    border-radius: 10px;
+}
+.logo-header {
+	padding: 20px;
+	float: left;
+}
+.menu-header {
+	padding: 40px;
+	float: right;
+}
+footer {
+
+}

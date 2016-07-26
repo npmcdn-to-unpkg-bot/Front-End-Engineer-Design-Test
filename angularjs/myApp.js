@@ -11,8 +11,11 @@ var app = angular.module('MyApp', [])
         $scope.x2 = angular.isNumber($scope.x1);
 
         $http.get("http://www.w3schools.com/angular/customers_mysql.php")
-       .then(function (response) {$scope.names = response.data.records;});
+            .then(function (response) {
+                $scope.names = response.data.records;
+            });
 
+        // 以下只是範例：
         // var todoList = this;
         // todoList.todos = [
         //     { text: 'learn angular', done: true },
