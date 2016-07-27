@@ -3,9 +3,18 @@ header {
 	background-color: #FFECF5;
 	width: 102%;
 	height: 75px;
-	margin: -10px -10px 0px -1%;
+	margin: 0px 0px 0px;
 	border: 2px #ccc solid;
     border-radius: 10px;
+}
+.body-margin {
+	margin-bottom: 20px;
+}
+.text-center {
+	text-align: center;
+}
+.logo-text {
+	font-size: 24px;
 }
 .logo-header {
 	padding: 20px;
@@ -16,5 +25,9 @@ header {
 	float: right;
 }
 footer {
-
+	background-color: #FFECF5;
+	width: 102%;
+	height: 50px;
+	border: 2px #ccc solid;
+    border-radius: 10px;
 }

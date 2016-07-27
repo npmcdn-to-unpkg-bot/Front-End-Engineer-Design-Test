@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="icom-img/ux-icon.jpg">
 	<title>UX/UI Design</title>
 	<link rel="stylesheet" type="text/css" href="CSS/uxui.css">
+	<link rel="stylesheet" href="CSS/w3.css">
 	<!-- jQuery.1.12.4.min.js Link -->
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
@@ -12,9 +14,10 @@
     <script src="js/jquery-2.2.4.min.js"></script>
 </head>
 <body>
+	<!-- Header -->
 	<header>
 		<div class="logo-header">
-			UXUI - LOGO<img src="" width="30" height="30">
+			<img src="icom-img/ux-icon.jpg" width="30" height="30"><b class="logo-text">UXUI - LOGO</b>
 		</div>
 		<div class="menu-header">
 			<a href="#">about</a>
@@ -22,7 +25,19 @@
 			<a href="#">category..</a>
 		</div>
 	</header>
-
+	<!-- Banner -->
+	<div class="body-margin">
+		<h2 class="text-center">Manual Slideshow</h2>
+		<!-- SlideShow -->
+		<div class="w3-content" style="max-width:800px;position:relative">
+			<img class="mySlides" src="img/1.jpg" style="width:100%; height: 300px;">
+			<img class="mySlides" src="img/2.jpg" style="width:100%; height: 300px;">
+			<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+			<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+		</div>
+	</div>
+	<!-- Footer -->
 	<footer></footer>
+	<script type="text/javascript" src="js/slideshow-demo.js"></script>
 </body>
 </html>
