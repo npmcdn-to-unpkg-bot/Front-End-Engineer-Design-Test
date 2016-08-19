@@ -1,0 +1,12 @@
+.div-demo  {
+/*	margin: -10px 0 -5px 1px;*/
+	height: 300px;
+	width: 100%;
+	text-align: center;
+	background-color: #000000;
+}
+
+.text-demo {
+	text-shadow: 1px 2px 3px #000;
+	text-align: center;
+}
