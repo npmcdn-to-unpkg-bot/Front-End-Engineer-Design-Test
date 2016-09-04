@@ -3,7 +3,11 @@
 	height: 300px;
 	width: 100%;
 	text-align: center;
-	background-color: #000000;
+	/*background-color: #000000;*/
+	background-image: url(../img/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    /*background-image: inherit;*/
 }
 
 .button-demo {
